@@ -24,19 +24,19 @@ public class GPACalculator
 		{
 			double tempGPAForClass = 0.0;
 			
-			if (s.substring(0, 1).contentEquals("A"))
+			if (s.substring(0, 1).equals("A"))
 				tempGPAForClass = 4.0;
 			
-			else if(s.substring(0, 1).contentEquals("B"))
+			else if(s.substring(0, 1).equals("B"))
 				tempGPAForClass = 3.0;
 			
-			else if(s.substring(0, 1).contentEquals("C"))
+			else if(s.substring(0, 1).equals("C"))
 				tempGPAForClass = 2.0;
 			
-			else if(s.substring(0, 1).contentEquals("D"))
+			else if(s.substring(0, 1).equals("D"))
 				tempGPAForClass = 1.0;
 			
-			else if(s.substring(0, 1).contentEquals("F"))
+			else if(s.substring(0, 1).equals("F"))
 				tempGPAForClass = 0.0;
 			
 			//Adding or subtracting .3 for pluses and minuses for GPA
@@ -44,7 +44,7 @@ public class GPACalculator
 			if (s.length() < 2)
 				tempGPAForClass = tempGPAForClass + 0.0;
 			
-			else if (s.substring(1).contentEquals("-"))
+			else if (s.substring(1).equals("-"))
 				tempGPAForClass = tempGPAForClass - 0.3;
 			
 			else if (s.substring(1).equals("+"))

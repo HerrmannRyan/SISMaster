@@ -18,11 +18,11 @@ public class Student
 		private int periodNum;
 		
 	
-		public Student(String fN, String lN, String fC ,String fG, String sC, String sG, String tC, String tG,int pN, double gpa)
+		public Student(String fN, String lN, String fC ,String fG, String sC, String sG, String tC, String tG, int pN, double gpa)
 		{
 			firstName = fN;
 			lastName = lN;
-			periodNum=pN;
+			periodNum = pN;
 			firstClass = fC;
 			secondClass = sC;
 			thirdClass = tC;

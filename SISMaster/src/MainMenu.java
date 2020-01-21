@@ -24,7 +24,7 @@ public class MainMenu
 						SISRunner.switchMenuAndgrades();
 						break;
 					case 3:
-						//sort the students here
+						MenuChoices.askToSort();
 						break;
 					case 4:
 						System.out.println("Thank you");
