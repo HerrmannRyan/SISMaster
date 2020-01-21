@@ -1,3 +1,4 @@
+
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
@@ -15,9 +16,7 @@ public class Submenus
 			Scanner stringInput = new Scanner(System.in);
 
 			System.out.println("");
-			System.out.println("What would you like to do?\n"
-					+ "1) delete a student\n"
-					+ "2) add a student");
+			System.out.println("Would you like to (1) delete a student or (2) add a student?");
 		
 			choiceOne = intInput.nextInt();
 			
@@ -29,6 +28,7 @@ public class Submenus
 					
 					i = intInput.nextInt();
 					
+
 					
 					SISRunner.roster.remove(i - 1);
 					
@@ -77,7 +77,9 @@ public class Submenus
 					displayStudents();
 //testing
 				}
-		
+		if(choiceOne==3) {
+		MenuChoices.askToSort();
+		}
 		}
 
 
@@ -91,3 +93,4 @@ public class Submenus
 					}				
 			}
 	}
+

@@ -1,9 +1,13 @@
+import java.util.ArrayList;
 
 public class Student
 	{
 		
 		private String firstName;
 		private String lastName;
+	
+
+
 		private String firstClass;
 		private String firstGrade;
 		private String secondClass;
@@ -11,13 +15,14 @@ public class Student
 		private String thirdClass;
 		private String thirdGrade;
 		private double gradePointAverage;
+		private int periodNum;
 		
-		
-		public Student(String fN, String lN, String fC ,String fG, String sC, String sG, String tC, String tG, double gpa)
+	
+		public Student(String fN, String lN, String fC ,String fG, String sC, String sG, String tC, String tG,int pN, double gpa)
 		{
 			firstName = fN;
 			lastName = lN;
-			
+			periodNum=pN;
 			firstClass = fC;
 			secondClass = sC;
 			thirdClass = tC;
@@ -29,6 +34,17 @@ public class Student
 			gradePointAverage = gpa;
 			
 		}
+		public int getPeriodNum()
+			{
+				return periodNum;
+			}
+
+
+		public void setPeriodNum(int periodNum)
+			{
+				this.periodNum = periodNum;
+			}
+
 
 
 		public String getFirstGrade()
