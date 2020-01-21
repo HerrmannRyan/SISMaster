@@ -16,25 +16,13 @@ public class SISRunner
 		public static void main(String[] args) throws FileNotFoundException
 			{
 
-				/*FileReader.readFile();
-				GPACalculator.calculateGPAForEachStudent();
-				MainMenu.printMainMenu();
-				Submenus.addOrDelete();*/
-
-
+				FileReader.readFile();
 				while(stillInSystem)
 					{
 						System.out.println();
-						FileReader.readFile();
 						GPACalculator.calculateGPAForEachStudent();
 						MainMenu.printMainMenu();
-				//testArrayList();
-				//ChangeGrades.changeGrades();
-				//GPACalculator.calculateGPAForEachStudent();
 
-				//testArrayList();
-				//ChangeSchedule.changeSchedule();
-				//testArrayList();
 					}
 			}
 		
@@ -43,16 +31,16 @@ public class SISRunner
 				int counter = 1;
 				for(Student t: roster)
 					{
-						System.out.println(counter + ": " + t.getFirstName() + " " + t.getLastName() + " " + t.getFirstClass() + " " + t.getFirstGrade() + " " + t.getSecondClass() + " " + t.getSecondGrade() + " " +  t.getThirdClass() + " " + t.getThirdGrade() + " " +  t.getGradePointAverage());
+						String studentGPA = decFor.format(t.getGradePointAverage());
+						System.out.println(counter + ": " + t.getFirstName() + " " + t.getLastName() + " " 
+								+ t.getFirstClass() + " " + t.getFirstGrade() + " " 
+								+ t.getSecondClass() + " " + t.getSecondGrade() + " " 
+								+  t.getThirdClass() + " " + t.getThirdGrade() + " " 
+								+  studentGPA);
 						counter++;
 					}
 			}
 
-		public static void displayData()
-			{
-				// TODO Auto-generated method stub
-				
-			}
 
 		public static void switchMenuAndgrades()
 			{

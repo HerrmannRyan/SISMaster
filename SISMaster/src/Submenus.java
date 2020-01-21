@@ -10,19 +10,20 @@ public class Submenus
 		
 		public static void addOrDelete() throws FileNotFoundException
 		{
-			displayStudents();
 			
 			Scanner intInput = new Scanner(System.in);
 			Scanner stringInput = new Scanner(System.in);
 
 			System.out.println("");
-			System.out.println("Would you like to (1) delete a student or (2) add a student?");
+			System.out.println("What would you like to do?\n"
+					+ "1) Delete a student\n"
+					+ "2) Add a student");
 		
 			choiceOne = intInput.nextInt();
 			
 			if (choiceOne == 1)
 				{
-					displayStudents();
+					SISRunner.testArrayList();
 					System.out.println("");
 					System.out.println("Enter the number of the student you would like to delete.");
 					
@@ -32,7 +33,7 @@ public class Submenus
 					
 					SISRunner.roster.remove(i - 1);
 					
-					displayStudents();
+					SISRunner.testArrayList();
 					
 
 
@@ -40,7 +41,7 @@ public class Submenus
 			
 			if (choiceOne == 2)
 				{
-					displayStudents();
+					SISRunner.testArrayList();
 
 					System.out.println("");
 					System.out.println("What is the new student's first name?");
@@ -72,25 +73,22 @@ public class Submenus
 					//double gpa = doubleInput.nextDouble();
 				
 
-					SISRunner.roster.add( new Student(firstName, lastName, firstClass, firstGrade, secondClass, secondGrade, thirdClass, thirdGrade, 0.0));
+					SISRunner.roster.add(new Student(firstName, lastName, firstClass, firstGrade, secondClass, secondGrade, thirdClass, thirdGrade, 0, 0.0));
 					
-					displayStudents();
+					GPACalculator.calculateGPAForEachStudent();
+					SISRunner.testArrayList();;
 //testing
 				}
-		if(choiceOne==3) {
-		MenuChoices.askToSort();
-		}
-		}
 
 
-		private static void displayStudents()
-			{
-				int counter = 1;
-				for (Student s: SISRunner.roster)
-					{
-						System.out.println(counter + ": " + s.getFirstName() + " " + s.getLastName());
-						counter++;
-					}				
+//		private static void displayStudents()
+//			{
+//				int counter = 1;
+//				for (Student s: SISRunner.roster)
+//					{
+//						System.out.println(counter + ": " + s.getFirstName() + " " + s.getLastName());
+//						counter++;
+//					}				
 			}
 	}
 
