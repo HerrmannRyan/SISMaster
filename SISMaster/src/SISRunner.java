@@ -15,7 +15,6 @@ public class SISRunner
 		
 		public static void main(String[] args) throws FileNotFoundException
 			{
-
 				/*FileReader.readFile();
 				GPACalculator.calculateGPAForEachStudent();
 				MainMenu.printMainMenu();
@@ -43,15 +42,31 @@ public class SISRunner
 				int counter = 1;
 				for(Student t: roster)
 					{
-						System.out.println(counter + ": " + t.getFirstName() + " " + t.getLastName() + " " + t.getFirstClass() + " " + t.getFirstGrade() + " " + t.getSecondClass() + " " + t.getSecondGrade() + " " +  t.getThirdClass() + " " + t.getThirdGrade() + " " + t.getGradePointAverage());
+						System.out.printf("%-25s", counter + ": " + t.getFirstName() + " " + t.getLastName());
+						System.out.printf("%-15s", t.getFirstClass() + " " + t.getFirstGrade());
+						System.out.printf("%-15s", t.getSecondClass() + " " + t.getSecondGrade());
+						System.out.printf("%-15s", t.getThirdClass() + " " + t.getThirdGrade());
+						System.out.printf("%-3s", t.getGradePointAverage() + "\n");
+
 						counter++;
-					}
+					}	
 			}
 
-		public static void displayData()
+		//public static void displayData()
 			{
-				// TODO Auto-generated method stub
-				
+				int counter = 1;
+				System.out.println("");
+				for(Student t: roster)
+					{
+						System.out.printf("%-25s", counter + ": " + t.getFirstName() + " " + t.getLastName());
+						System.out.printf("%-15s", t.getFirstClass() + " " + t.getFirstGrade());
+						System.out.printf("%-15s", t.getSecondClass() + " " + t.getSecondGrade());
+						System.out.printf("%-15s", t.getThirdClass() + " " + t.getThirdGrade());
+						System.out.printf("%-3s", t.getGradePointAverage() + "\n");
+
+						counter++;
+					}
+				System.out.println("");
 			}
 
 		public static void switchMenuAndgrades()
