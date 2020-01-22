@@ -49,6 +49,8 @@ public class SISRunner
 						System.out.printf("%-3s", t.getGradePointAverage() + "\n");
 
 						counter++;
+						
+						//display commit, puts things in columns
 					}	
 			}
 
