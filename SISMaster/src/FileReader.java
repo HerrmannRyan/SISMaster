@@ -26,7 +26,7 @@ public class FileReader
 					String thirdClass = studentInformation[6];
 					String thirdGrade = studentInformation[7];
 					
-					SISRunner.roster.add( new Student(firstName, lastName, firstClass, firstGrade, secondClass, secondGrade, thirdClass, thirdGrade, 0.0));
+					SISRunner.roster.add( new Student(firstName, lastName, firstClass, firstGrade, secondClass, secondGrade, thirdClass, thirdGrade, 0, 0.0));
 					
 				}
 		}

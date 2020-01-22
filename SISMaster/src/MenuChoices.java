@@ -8,30 +8,24 @@ public class MenuChoices
 
 		public static void askToSort()
 			{
-				System.out.println("\t(1) sort by last name");
-				System.out.println("\t(2) sort by GPA");
-				System.out.println("\t(3) sort by period");
-				System.out.println("\t(4) return to main menu");
+				System.out.println("1) Sort by last name");
+				System.out.println("2) Sort by GPA");
+				System.out.println("3) Sort by period");
 
 				Scanner userInput = new Scanner(System.in);
 				int menuChoice = userInput.nextInt();
 				if (menuChoice == 1)
 					{
-						Collections.sort(SISRunner.roster, new NameSorter());
+						Collections.sort(SISRunner.roster, new NameSorter("LastName"));
 
 					} else if (menuChoice == 2)
 					{
-						Collections.sort(SISRunner.roster, newGPASorter());
+						Collections.sort(SISRunner.roster, new NameSorter("GPA"));
 
 					} else if (menuChoice == 3)
 					displayPeriodSorterMenu();
-
-				else
-					{
-						displayAddDeleteMenu();
-
-					}
-				SISRunner.displayData();
+				
+				SISRunner.testArrayList();
 
 			}
 
@@ -43,7 +37,18 @@ public class MenuChoices
 
 		private static void displayPeriodSorterMenu()
 			{
-				// TODO Auto-generated method stub
+				System.out.println("Which period would you like to sort?\n"
+						   + "1)\n"
+						   + "2)\n"
+						   + "3)\n");
+				int menuChoice = SISRunner.userIntInput.nextInt();
+				
+				if (menuChoice == 1)
+					Collections.sort(SISRunner.roster, new NameSorter("ClassOne"));
+				else if (menuChoice == 2)
+					Collections.sort(SISRunner.roster, new NameSorter("ClassTwo"));
+				else if (menuChoice == 3)
+					Collections.sort(SISRunner.roster, new NameSorter("ClassThree"));
 
 			}
 

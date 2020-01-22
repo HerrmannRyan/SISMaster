@@ -15,25 +15,14 @@ public class SISRunner
 		
 		public static void main(String[] args) throws FileNotFoundException
 			{
-				/*FileReader.readFile();
-				GPACalculator.calculateGPAForEachStudent();
-				MainMenu.printMainMenu();
-				Submenus.addOrDelete();*/
-
+				FileReader.readFile();
 
 				while(stillInSystem)
 					{
 						System.out.println();
-						FileReader.readFile();
 						GPACalculator.calculateGPAForEachStudent();
 						MainMenu.printMainMenu();
-				//testArrayList();
-				//ChangeGrades.changeGrades();
-				//GPACalculator.calculateGPAForEachStudent();
 
-				//testArrayList();
-				//ChangeSchedule.changeSchedule();
-				//testArrayList();
 					}
 			}
 		
@@ -42,33 +31,23 @@ public class SISRunner
 				int counter = 1;
 				for(Student t: roster)
 					{
+
 						System.out.printf("%-25s", counter + ": " + t.getFirstName() + " " + t.getLastName());
 						System.out.printf("%-15s", t.getFirstClass() + " " + t.getFirstGrade());
 						System.out.printf("%-15s", t.getSecondClass() + " " + t.getSecondGrade());
 						System.out.printf("%-15s", t.getThirdClass() + " " + t.getThirdGrade());
 						System.out.printf("%-3s", t.getGradePointAverage() + "\n");
+						/*String studentGPA = decFor.format(t.getGradePointAverage());
+						System.out.println(counter + ": " + t.getFirstName() + " " + t.getLastName() + " " 
+								+ t.getFirstClass() + " " + t.getFirstGrade() + " " 
+								+ t.getSecondClass() + " " + t.getSecondGrade() + " " 
+								+  t.getThirdClass() + " " + t.getThirdGrade() + " " 
+								+  studentGPA);*/
 
 						counter++;
 						
 						//display commit, puts things in columns
 					}	
-			}
-
-		//public static void displayData()
-			{
-				int counter = 1;
-				System.out.println("");
-				for(Student t: roster)
-					{
-						System.out.printf("%-25s", counter + ": " + t.getFirstName() + " " + t.getLastName());
-						System.out.printf("%-15s", t.getFirstClass() + " " + t.getFirstGrade());
-						System.out.printf("%-15s", t.getSecondClass() + " " + t.getSecondGrade());
-						System.out.printf("%-15s", t.getThirdClass() + " " + t.getThirdGrade());
-						System.out.printf("%-3s", t.getGradePointAverage() + "\n");
-
-						counter++;
-					}
-				System.out.println("");
 			}
 
 		public static void switchMenuAndgrades()

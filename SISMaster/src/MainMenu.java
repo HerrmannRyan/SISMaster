@@ -1,8 +1,9 @@
+import java.io.FileNotFoundException;
 
 public class MainMenu
 	{
 		
-		public static void printMainMenu()
+		public static void printMainMenu() throws FileNotFoundException
 			{
 				System.out.println("What would you like to do? \n"
 						+ "1) Add or delete a student? \n"
@@ -17,13 +18,13 @@ public class MainMenu
 				switch (mainMenuChoice)
 				{
 					case 1:
-						//do the adding or deleting thing here
+						Submenus.addOrDelete();
 						break;
 					case 2:
 						SISRunner.switchMenuAndgrades();
 						break;
 					case 3:
-						//sort the students here
+						MenuChoices.askToSort();
 						break;
 					case 4:
 						System.out.println("Thank you");
