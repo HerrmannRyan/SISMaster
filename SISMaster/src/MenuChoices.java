@@ -24,12 +24,6 @@ public class MenuChoices
 
 					} else if (menuChoice == 3)
 					displayPeriodSorterMenu();
-
-				else
-					{
-						displayAddDeleteMenu();
-
-					}
 				
 				SISRunner.testArrayList();
 
@@ -43,7 +37,18 @@ public class MenuChoices
 
 		private static void displayPeriodSorterMenu()
 			{
-				// TODO Auto-generated method stub
+				System.out.println("Which period would you like to sort?\n"
+						   + "1)\n"
+						   + "2)\n"
+						   + "3)\n");
+				int menuChoice = SISRunner.userIntInput.nextInt();
+				
+				if (menuChoice == 1)
+					Collections.sort(SISRunner.roster, new NameSorter("ClassOne"));
+				else if (menuChoice == 2)
+					Collections.sort(SISRunner.roster, new NameSorter("ClassTwo"));
+				else if (menuChoice == 3)
+					Collections.sort(SISRunner.roster, new NameSorter("ClassThree"));
 
 			}
 
